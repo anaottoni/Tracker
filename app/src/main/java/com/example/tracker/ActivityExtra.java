@@ -21,6 +21,7 @@ public class ActivityExtra extends AppCompatActivity {
     private TextView textDescricao;
     private TextView textNotaMedia;
     private MediaPlayer mediaPlayer;
+    private TextView textUsuario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class ActivityExtra extends AppCompatActivity {
         textGenero = findViewById(R.id.textGenero);
         textDescricao = findViewById(R.id.textDescricao);
         textNotaMedia = findViewById(R.id.textNotaMedia);
+        textUsuario = findViewById(R.id.textNomeUsuario);
 
         // REQUISITO 3.2 e 3.3: Pegando a Intent e preenchendo as informações
         Intent it = getIntent();
@@ -48,6 +50,13 @@ public class ActivityExtra extends AppCompatActivity {
             textTitulo.setText(it.getStringExtra("ch_titulo"));
             textGenero.setText(it.getStringExtra("ch_genero"));
             textDescricao.setText(it.getStringExtra("ch_descricao"));
+
+
+            String usuario = it.getStringExtra("ch_usuario");
+
+            if (usuario != null && textUsuario != null) {
+                textUsuario.setText("Avaliador: " + usuario);
+            }
 
             String artista = it.getStringExtra("ch_artista");
             String ano = it.getStringExtra("ch_ano");
