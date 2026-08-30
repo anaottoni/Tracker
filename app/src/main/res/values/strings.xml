@@ -43,4 +43,12 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
+    <!--STRINGS ACTIVITY EXTRA-->
+    <string name="title_reviews">Reviews dos usuários</string>
+    <string name="label_nota_usuarios">Nota dos usuários:</string>
+    <string name="btn_play">Play</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_encerrar">Encerrar</string>
+
 </resources>
