@@ -6,12 +6,12 @@
     </style>
 
     <style name="BACKGROUND">
-        <item name="android:background">@color/cor_fundo_escuro</item>
+        <item name="android:background">@color/roxo_medio</item>
     </style>
 
     <style name="MENU">
-        <item name="android:background">@color/cor_menu_escuro</item>
-        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/roxo_escuro</item>
+        <item name="android:textColor">@color/branco</item>
     </style>
 
     <style name="SettingsPopUp" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
@@ -24,8 +24,8 @@
         <item name="colorSurface">#A58CA3</item>
 
         <!-- 3. Cor do texto dos itens do menu -->
-        <item name="android:textColor">@color/white</item>
-        <item name="colorOnSurface">@color/white</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="colorOnSurface">@color/branco</item>
 
         <!-- 4. Espaçamento/Ajuste vertical extra (opcional) -->
         <item name="android:dropDownVerticalOffset">4dp</item>

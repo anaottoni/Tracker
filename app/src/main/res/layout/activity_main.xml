@@ -35,7 +35,7 @@
         app:menu="@menu/bottom_menu_main"
         app:labelVisibilityMode="unlabeled"
         style="@style/MENU"
-        app:itemIconTint="@color/white"
+        app:itemIconTint="@color/branco"
 
         />
 
