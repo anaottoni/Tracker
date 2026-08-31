@@ -13,4 +13,21 @@
         <item name="android:background">@color/cor_menu_escuro</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <style name="SettingsPopUp" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
+        <!-- 1. Força a caixinha a abrir ABAIXO do botão (sem cobri-lo) -->
+        <item name="overlapAnchor">false</item>
+        <item name="android:overlapAnchor">false</item>
+
+        <!-- 2. Cor de fundo do menu -->
+        <item name="android:popupBackground">#A58CA3</item>
+        <item name="colorSurface">#A58CA3</item>
+
+        <!-- 3. Cor do texto dos itens do menu -->
+        <item name="android:textColor">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- 4. Espaçamento/Ajuste vertical extra (opcional) -->
+        <item name="android:dropDownVerticalOffset">4dp</item>
+    </style>
 </resources>

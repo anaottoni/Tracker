@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/FirstFragment"
         android:name="com.example.tracker.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:label=""
         tools:layout="@layout/fragment_first">
 
 <!--        <action-->
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/SecondFragment"
         android:name="com.example.tracker.SecondFragment"
-        android:label="@string/second_fragment_label"
+        android:label=""
         tools:layout="@layout/fragment_second">
 
 <!--        <action-->
@@ -29,7 +29,7 @@
     <fragment
         android:id="@+id/HomeFragment"
         android:name="com.example.tracker.HomeFragment"
-        android:label="@string/home_fragmen_label"
+        android:label=""
         tools:layout="@layout/fragment_home">
     <!--NAO PRECISAMOS DAS TAGS ACTION QUANDO A NAVEGACAO É FEITA COM O MENU -->
     </fragment>
@@ -37,7 +37,7 @@
     <fragment
         android:id="@+id/FiltroFragment"
         android:name="com.example.tracker.FiltroFragment"
-        android:label="@string/home_fragmen_label">
+        android:label="">
     </fragment>
 
 </navigation>

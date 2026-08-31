@@ -14,14 +14,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
         style="@style/MENU">
 
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/SettingsPopUp"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -36,6 +36,7 @@
         app:labelVisibilityMode="unlabeled"
         style="@style/MENU"
         app:itemIconTint="@color/white"
+
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

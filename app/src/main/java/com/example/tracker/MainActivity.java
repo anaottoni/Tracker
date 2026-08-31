@@ -1,13 +1,18 @@
 package com.example.tracker;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -29,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
+
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -59,6 +67,14 @@ public class MainActivity extends AppCompatActivity {
             NavigationUI.setupWithNavController(bottomNavigationView, navController);
         }
 
+        // retirando o espaçamento do bottom menu main:
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNav);
+
+        ViewCompat.setOnApplyWindowInsetsListener(bottomNav, (v, insets) -> {
+            v.setPadding(0, 0, 0, 0);
+            return insets;
+        });
+
 //        binding.fab.setOnClickListener(
 //                view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAnchorView(R.id.fab)
@@ -69,19 +85,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.top_menu_main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.theme_light) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            return true;
+        } else if (id == R.id.theme_dark) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            return true;
+        } else if (id == R.id.theme_system) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
             return true;
         }
 

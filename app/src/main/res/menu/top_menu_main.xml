@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Configurações"
+        app:showAsAction="ifRoom" >
+
+        <!-- Submenu que abre a caixinha suspensa -->
+        <menu>
+            <item
+                android:id="@+id/theme_light"
+                android:title="Modo Claro" />
+            <item
+                android:id="@+id/theme_dark"
+                android:title="Modo Escuro" />
+            <item
+                android:id="@+id/theme_system"
+                android:title="Padrão do Sistema" />
+        </menu>
+
+    </item>
+</menu>
