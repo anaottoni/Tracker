@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="laranja">#F99932</color>
+    <color name="roxo">#703C84</color>
+
+    <!-- CORES TEMA CLARO-->
+    <color name="cor_fundo_claro">#E5E5E5</color>
+    <color name="cor_menu_claro">#A58CA3</color>
+
+    <!-- CORES TEMA ESCURO-->
+    <color name="cor_fundo_escuro">#5C4A5A</color>
+    <color name="cor_menu_escuro">#30252F</color>
 </resources>

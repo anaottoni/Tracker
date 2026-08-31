@@ -4,4 +4,13 @@
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
+
+    <style name="BACKGROUND">
+        <item name="android:background">@color/cor_fundo_escuro</item>
+    </style>
+
+    <style name="MENU">
+        <item name="android:background">@color/cor_menu_escuro</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

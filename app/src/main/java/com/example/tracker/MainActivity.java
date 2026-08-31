@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,17 +44,26 @@ public class MainActivity extends AppCompatActivity {
                 .findFragmentById(R.id.nav_host_fragment_content_main);
 
         if (navHostFragment != null) {
+            // navController = gerenciador de rotas do android (sabe qual tela está ativa e para onde ir)
             NavController navController = navHostFragment.getNavController();
 
-            appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-            NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+            // dizendo quais telas sao consideradas "principais" (para não mostrar o botão de voltar <- na barra superior quando o usuário estiver nelas)
+            appBarConfiguration = new AppBarConfiguration.Builder( R.id.FiltroFragment, R.id.HomeFragment ).build();
+
+            NavigationUI.setupActionBarWithNavController( this, navController, appBarConfiguration);
+
+            // pegando a barra de navegacao do xml
+            BottomNavigationView bottomNavigationView = binding.bottomNav;
+
+            // conectando os cliques dos botoes do menu com a troca de telas do navcontroller
+            NavigationUI.setupWithNavController(bottomNavigationView, navController);
         }
 
-        binding.fab.setOnClickListener(
-                view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show()
-        );
+//        binding.fab.setOnClickListener(
+//                view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAnchorView(R.id.fab)
+//                        .setAction("Action", null).show()
+//        );
     }
 
     @Override
