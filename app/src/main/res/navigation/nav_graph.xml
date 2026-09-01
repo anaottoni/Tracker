@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/HomeFragment">
+    app:startDestination="@id/FiltroFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -26,13 +26,6 @@
 <!--            app:destination="@id/FirstFragment" />-->
     </fragment>
 
-    <fragment
-        android:id="@+id/HomeFragment"
-        android:name="com.example.tracker.HomeFragment"
-        android:label=""
-        tools:layout="@layout/fragment_home">
-    <!--NAO PRECISAMOS DAS TAGS ACTION QUANDO A NAVEGACAO É FEITA COM O MENU -->
-    </fragment>
 
     <fragment
         android:id="@+id/FiltroFragment"

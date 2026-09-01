@@ -1,34 +1,72 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Tracker" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
+        <!-- 1. Cor do Fundo Geral da Tela -->
+        <item name="android:colorBackground">@color/cinza_claro</item>
+
+        <!-- 2. Cor Principal / Cor dos Botões -->
+        <item name="colorPrimary">@color/laranja</item>
+        <item name="colorOnPrimary">@color/branco</item>
+
+        <!-- 3. Superfícies de Cards e Menus -->
+        <item name="colorSurface">@color/roxo_claro</item>
+        <item name="colorOnSurface">@color/branco</item>
+
+        <!-- 4. Estilização Global para todos os MaterialButtons do app -->
+        <item name="materialButtonStyle">@style/EstiloBotaoPadrao</item>
+        <item name="cardViewStyle">@style/MeuCardViewStyle</item>
+
+        <item name="android:textColor">@color/roxo_letra</item>
+
+
     </style>
 
-    <style name="Theme.Tracker" parent="Base.Theme.Tracker" />
 
-    <style name="BACKGROUND">
-        <item name="android:background">@color/cinza_claro</item>
+    <!-- Estilo Customizado para o CardView -->
+    <style name="MeuCardViewStyle" parent="CardView">
+        <!-- Cor de fundo do CardView -->
+        <item name="cardBackgroundColor">@color/branco</item>
+
+        <!-- Cantos arredondados -->
+        <item name="cardCornerRadius">16dp</item>
+
+        <!-- Elevação/Sombra -->
+        <item name="cardElevation">2dp</item>
     </style>
-    
+
     <style name="MENU">
         <item name="android:background">@color/roxo_claro</item>
     </style>
 
-    <!-- Estilo personalizado para o Menu Popup -->
+    <style name="EstiloBotaoPadrao" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/laranja</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="EstiloBotaoDestaque" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/roxo_medio</item>
+        <item name="android:textColor">@color/branco</item>
+        <item name="cornerRadius">24dp</item>
+    </style>
+
+    <style name="TextoTitulo">
+        <item name="android:textColor">@color/roxo_escuro</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--  POP UP DAS CONFIGURACOES  -->
     <style name="SettingsPopUp" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
-        <!-- 1. Força a caixinha a abrir ABAIXO do botão (sem cobri-lo) -->
         <item name="overlapAnchor">false</item>
         <item name="android:overlapAnchor">false</item>
-
-        <!-- 2. Cor de fundo do menu -->
-        <item name="android:popupBackground">#A58CA3</item>
-        <item name="colorSurface">#A58CA3</item>
-
-        <!-- 3. Cor do texto dos itens do menu -->
-        <item name="android:textColor">@color/branco</item>
-        <item name="colorOnSurface">@color/branco</item>
-
-        <!-- 4. Espaçamento/Ajuste vertical extra (opcional) -->
         <item name="android:dropDownVerticalOffset">4dp</item>
+
+        <item name="android:popupBackground">@color/branco</item>
+        <item name="colorSurface">@color/branco</item>
+
+        <item name="android:textColor">@color/roxo_letra</item>
+        <item name="colorOnSurface">@color/roxo_letra</item>
     </style>
+
 </resources>

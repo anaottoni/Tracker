@@ -54,12 +54,12 @@ public class FiltroFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // 1. Instancia o ViewModel compartilhado da Activity
+        // instanciando uma viewModel
         viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
 
         spinner = view.findViewById(R.id.spinner);
 
-        // 2. Configura o Adapter do Spinner
+        // criando adapter + setando no spinner
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 requireContext(),
                 R.array.generos,
@@ -68,7 +68,6 @@ public class FiltroFragment extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        // 3. Atualiza o ViewModel quando o Spinner muda
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -78,6 +77,16 @@ public class FiltroFragment extends Fragment {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        // ajustando a largura do dropdown personalizado do spinner +
+        // corrigindo o deslocamento
+        spinner.post(new Runnable() {
+            @Override
+            public void run() {
+                spinner.setDropDownWidth(spinner.getWidth());
+                spinner.setDropDownHorizontalOffset(-spinner.getPaddingStart());
+            }
         });
     }
 

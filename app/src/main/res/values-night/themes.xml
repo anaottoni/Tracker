@@ -1,12 +1,41 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Tracker" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <!-- 1. Cor do Fundo Geral da Tela -->
+        <item name="android:colorBackground">@color/roxo_medio</item>
+
+        <!-- 2. Cor Principal / Cor dos Botões -->
+        <item name="colorPrimary">@color/laranja</item>
+        <item name="colorOnPrimary">@color/branco</item>
+
+        <!-- 3. Superfícies de Cards e Menus -->
+        <item name="colorSurface">@color/roxo_claro</item>
+        <item name="colorOnSurface">@color/branco</item>
+
+        <!-- 4. Estilização Global para todos os MaterialButtons do app -->
+        <item name="materialButtonStyle">@style/EstiloBotaoPadrao</item>
+
+        <item name="cardViewStyle">@style/MeuCardViewStyle</item>
+
+        <item name="android:textColor">@color/roxo_escuro</item>
     </style>
 
-    <style name="BACKGROUND">
-        <item name="android:background">@color/roxo_medio</item>
+    <style name="TextoTitulo">
+        <item name="android:textColor">@color/branco</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Estilo Customizado para o CardView -->
+    <style name="MeuCardViewStyle" parent="CardView">
+        <!-- Cor de fundo do CardView -->
+        <item name="cardBackgroundColor">@color/roxo_claro</item>
+
+        <!-- Cantos arredondados -->
+        <item name="cardCornerRadius">16dp</item>
+
+        <!-- Elevação/Sombra -->
+        <item name="cardElevation">2dp</item>
     </style>
 
     <style name="MENU">
@@ -14,20 +43,19 @@
         <item name="android:textColor">@color/branco</item>
     </style>
 
+    <!--  POP UP DAS CONFIGURACOES  -->
     <style name="SettingsPopUp" parent="ThemeOverlay.MaterialComponents.Toolbar.Surface">
-        <!-- 1. Força a caixinha a abrir ABAIXO do botão (sem cobri-lo) -->
         <item name="overlapAnchor">false</item>
         <item name="android:overlapAnchor">false</item>
+        <item name="android:dropDownVerticalOffset">4dp</item>
 
-        <!-- 2. Cor de fundo do menu -->
-        <item name="android:popupBackground">#A58CA3</item>
-        <item name="colorSurface">#A58CA3</item>
+        <!-- Substituído o valor HEX (#A58CA3) pela variável do colors.xml -->
+        <item name="android:popupBackground">@color/roxo_claro</item>
+        <item name="colorSurface">@color/roxo_claro</item>
 
-        <!-- 3. Cor do texto dos itens do menu -->
         <item name="android:textColor">@color/branco</item>
         <item name="colorOnSurface">@color/branco</item>
-
-        <!-- 4. Espaçamento/Ajuste vertical extra (opcional) -->
-        <item name="android:dropDownVerticalOffset">4dp</item>
     </style>
+
+
 </resources>

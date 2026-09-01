@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             NavController navController = navHostFragment.getNavController();
 
             // dizendo quais telas sao consideradas "principais" (para não mostrar o botão de voltar <- na barra superior quando o usuário estiver nelas)
-            appBarConfiguration = new AppBarConfiguration.Builder( R.id.FiltroFragment, R.id.HomeFragment ).build();
+            appBarConfiguration = new AppBarConfiguration.Builder( R.id.FiltroFragment).build();
 
             NavigationUI.setupActionBarWithNavController( this, navController, appBarConfiguration);
 
