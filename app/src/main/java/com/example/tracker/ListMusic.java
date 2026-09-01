@@ -1,10 +1,12 @@
 package com.example.tracker;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -58,11 +60,13 @@ public class ListMusic extends Fragment {
                 getString(R.string.nome_musica_gospel),
                 "Gospel",
                 R.drawable.filho_da_fe,
-                4,
+                R.raw.filho_da_fe,
                 2.0,
                 getString(R.string.Samuel),
                 2026,
-                "The love"
+                "The love",
+                getString(R.string.avaliador_musica_gospel),
+                getString(R.string.avaliacao_musica_gospel)
         ));
 
         todasAsMusicas.add(new ItemModel(
@@ -70,11 +74,13 @@ public class ListMusic extends Fragment {
                 getString(R.string.nome_musica_kpop),
                 "K-pop",
                 R.drawable.boy_with_luv,
-                1,
+                R.raw.boy_with_luv,
                 5.0,
                 getString(R.string.bts),
                 2019,
-                "Map of the Soul: Persona"
+                "Map of the Soul: Persona",
+                getString(R.string.avaliador_musica_kpop),
+                getString(R.string.avaliacao_musica_kpop)
         ));
 
         todasAsMusicas.add(new ItemModel(
@@ -82,11 +88,13 @@ public class ListMusic extends Fragment {
                 getString(R.string.nome_musica_sertanejo),
                 "Sertanejo",
                 R.drawable.louca_de_saudade,
-                2,
+                R.raw.louca_de_saudade,
                 3.0,
                 getString(R.string.Jorge),
                 2016,
-                "Como. Sempre Feito. Nunca"
+                "Como. Sempre Feito. Nunca",
+                getString(R.string.avaliador_musica_sertanejo),
+                getString(R.string.avaliacao_musica_sertanejo)
         ));
 
         todasAsMusicas.add(new ItemModel(
@@ -94,11 +102,13 @@ public class ListMusic extends Fragment {
                 getString(R.string.nome_musica_pop),
                 "Pop",
                 R.drawable.house_tour,
-                3,
+                R.raw.house_tour,
                 4.0,
                 getString(R.string.Sabrina),
                 2025,
-                "Man's Best Friend"
+                "Man's Best Friend",
+                getString(R.string.avaliador_musica_pop),
+                getString(R.string.avaliacao_musica_pop)
         ));
 
         // Lista que será exibida
@@ -112,6 +122,28 @@ public class ListMusic extends Fragment {
 
         // Ligando Adapter ao ListView
         listViewMusicas.setAdapter(adapter);
+
+        // Ligando na Activity Extra
+        listViewMusicas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ItemModel item = (ItemModel) parent.getItemAtPosition(position);
+
+                Intent intent = new Intent(requireContext(), ActivityExtra.class);
+
+                intent.putExtra("ch_titulo", item.getNome());
+                intent.putExtra("ch_genero", item.getGenero());
+                intent.putExtra("ch_artista", item.getCantor());
+                intent.putExtra("ch_ano", String.valueOf(item.getAno()));
+                intent.putExtra("ch_album", item.getAlbum());
+                intent.putExtra("ch_nota", String.valueOf(item.getNota()));
+                intent.putExtra("ch_imagem", item.getImagem());
+                intent.putExtra("ch_audio", item.getIdAudio());
+                intent.putExtra("ch_avaliacao", item.getAvaliacao());
+                intent.putExtra("ch_avaliador", item.getAvaliador());
+                startActivity(intent);
+            }
+        });
 
         // Observando mudanças no gênero selecionado pelo Spinner
         viewModel.getGeneroSelecionado().observe(

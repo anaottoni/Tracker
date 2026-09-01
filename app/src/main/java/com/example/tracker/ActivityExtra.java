@@ -3,25 +3,33 @@ package com.example.tracker;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.appbar.MaterialToolbar;
+
 public class ActivityExtra extends AppCompatActivity {
+    private RatingBar ratingBar;
     private ImageView imgDestaque;
     private TextView textTitulo;
     private TextView textArtista;
     private TextView textGenero;
-    private TextView textDescricao;
+    private TextView textAvaliacao;
     private TextView textNotaMedia;
     private MediaPlayer mediaPlayer;
-    private TextView textUsuario;
+    private TextView textAvaliador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +37,33 @@ public class ActivityExtra extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_extra);
 
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mainLayout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-        // Vinculando os componentes da tela
+        ratingBar = findViewById(R.id.ratingBar);
         imgDestaque = findViewById(R.id.imgDestaque);
         textTitulo = findViewById(R.id.textTitulo);
         textArtista = findViewById(R.id.textArtista);
         textGenero = findViewById(R.id.textGenero);
-        textDescricao = findViewById(R.id.textDescricao);
+        textAvaliacao = findViewById(R.id.textAvaliacao);
         textNotaMedia = findViewById(R.id.textNotaMedia);
-        textUsuario = findViewById(R.id.textNomeUsuario);
+        textAvaliador = findViewById(R.id.textAvaliador);
 
-        // REQUISITO 3.2 e 3.3: Pegando a Intent e preenchendo as informações
         Intent it = getIntent();
         if (it != null) {
             textTitulo.setText(it.getStringExtra("ch_titulo"));
             textGenero.setText(it.getStringExtra("ch_genero"));
-            textDescricao.setText(it.getStringExtra("ch_descricao"));
+            textAvaliacao.setText(it.getStringExtra("ch_avaliacao"));
+            textAvaliador.setText(it.getStringExtra("ch_avaliador"));
 
-
-            String usuario = it.getStringExtra("ch_usuario");
-
-            if (usuario != null && textUsuario != null) {
-                textUsuario.setText("Avaliador: " + usuario);
-            }
 
             String artista = it.getStringExtra("ch_artista");
             String ano = it.getStringExtra("ch_ano");
@@ -65,10 +72,20 @@ public class ActivityExtra extends AppCompatActivity {
                 textArtista.setText(artista + " - " + (ano != null ? ano : "") + " (" + (album != null ? album : "") + ")");
             }
 
-            // EXIBINDO A NOTA DA MÚSICA
             String nota = it.getStringExtra("ch_nota");
-            if (nota != null && textNotaMedia != null) {
-                textNotaMedia.setText(nota);
+            if (nota != null) {
+                if (textNotaMedia != null) {
+                    textNotaMedia.setText(nota);
+                }
+
+                if (ratingBar != null) {
+                    try {
+                        float notaFloat = Float.parseFloat(nota);
+                        ratingBar.setRating(notaFloat);
+                    } catch (NumberFormatException e) {
+                        ratingBar.setRating(0f);
+                    }
+                }
             }
 
             int idImagem = it.getIntExtra("ch_imagem", 0);
@@ -78,21 +95,18 @@ public class ActivityExtra extends AppCompatActivity {
                 imgDestaque.setImageResource(idImagem);
             }
 
-            // REQUISITO 3.3: Inicializando o player com o áudio recebido
             if (idAudio != 0) {
                 mediaPlayer = MediaPlayer.create(this, idAudio);
             }
         }
     }
 
-    // Método para o onClick do botão Play no XML
     public void onClickPlay(View view) {
         if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
             mediaPlayer.start();
         }
     }
 
-    // Método para o onClick do botão Stop no XML
     public void onClickStop(View view) {
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
@@ -100,12 +114,10 @@ public class ActivityExtra extends AppCompatActivity {
         }
     }
 
-    // REQUISITO 3.4: Botão Encerrar que fecha a Activity
     public void onClickEncerrar(View view) {
         finish();
     }
 
-    // REQUISITO 3.5: Destruir o player ao fechar a tela
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -116,5 +128,30 @@ public class ActivityExtra extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
         }
+    }
+
+    //Tratar Menu:
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.top_menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.theme_light) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            return true;
+        } else if (id == R.id.theme_dark) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            return true;
+        } else if (id == R.id.theme_system) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

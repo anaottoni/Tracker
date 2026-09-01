@@ -2,15 +2,7 @@
     <string name="app_name">Tracker</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="home_fragmen_label">Home Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="lorem_ipsum">
-        Lorem ipsum dolor
-    </string>
+    <string name="activity_extra">Track Details</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -38,14 +30,33 @@
     <string name="btn_play">Play</string>
     <string name="btn_stop">Stop</string>
     <string name="btn_encerrar">Encerrar</string>
+
+
     <string name="bts">BTS</string>
     <string name="nome_musica_kpop">Boy with Luv</string>
+    <string name="avaliacao_musica_kpop">Melhor do Ano</string>
+    <string name="avaliador_musica_kpop">Ana Beatriz</string>
+
+
     <string name="Samuel">Samuel Filho</string>
     <string name="nome_musica_gospel">Filho da fé</string>
+    <string name="avaliacao_musica_gospel">Louvor lindo</string>
+    <string name="avaliador_musica_gospel">Maria Eduarda</string>
+
+
     <string name="Sabrina">Sabrina Carpenter </string>
     <string name="nome_musica_pop">House tour</string>
+    <string name="avaliacao_musica_pop">Amei esse hit</string>
+    <string name="avaliador_musica_pop">Sofia</string>
+
+
     <string name="Jorge"> Jorge e Mateus</string>
     <string name="nome_musica_sertanejo">Louca de saudade</string>
+    <string name="avaliacao_musica_sertanejo">Sofrendo muito com essa</string>
+    <string name="avaliador_musica_sertanejo">Ana Clara</string>
+
+
     <string name="nota_musica_5">★★★★★</string>
     <string name="nota_musica_4">★★★★</string>
+
 </resources>

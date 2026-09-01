@@ -10,8 +10,10 @@ public class ItemModel {
     private final String cantor;
     private final int ano;
     private final String album;
+    private final String avaliador;
+    private final String avaliacao;
 
-    public ItemModel(int id, String nome, String genero, int imagem, int idAudio, double nota, String cantor, int ano, String album) {
+    public ItemModel(int id, String nome, String genero, int imagem, int idAudio, double nota, String cantor, int ano, String album, String avaliador, String avaliacao) {
         this.id = id;
         this.nome = nome;
         this.genero = genero;
@@ -21,6 +23,8 @@ public class ItemModel {
         this.cantor = cantor;
         this.ano = ano;
         this.album = album;
+        this.avaliador = avaliador;
+        this.avaliacao = avaliacao;
     }
 
     public int getId() {
@@ -57,5 +61,11 @@ public class ItemModel {
 
     public String getAlbum() {
         return album;
+    }
+    public String getAvaliador() {
+        return avaliador;
+    }
+    public String getAvaliacao() {
+        return avaliacao;
     }
 }

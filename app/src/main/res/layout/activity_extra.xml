@@ -1,125 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFEF"
-    android:fillViewport="true">
+    android:background="@color/cinza_claro"
+    android:fitsSystemWindows="true"
+    tools:context=".ActivityExtra"
+    >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/mainLayout"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        style="@style/MENU">
 
-        <!-- Banner/Barra Superior com Engrenagem -->
-        <View
-            android:id="@+id/topBar"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:background="#A48FA3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/activity_extra"
+            app:titleTextColor="@color/branco"
+            app:menu="@menu/top_menu_main"
+            app:popupTheme="@style/SettingsPopUp" />
 
-        <ImageView
-            android:id="@+id/btnSettings"
-            android:layout_width="28dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="16dp"
-            android:contentDescription="@null"
-            android:src="@android:drawable/ic_menu_preferences"
-            app:layout_constraintBottom_toBottomOf="@+id/topBar"
-            app:layout_constraintEnd_toEndOf="@+id/topBar"
-            app:layout_constraintTop_toTopOf="@+id/topBar"
-            app:tint="#FFFFFF" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-        <!-- 1. CAPA DO ÁLBUM (Dinamico) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <ImageView
             android:id="@+id/imgDestaque"
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:contentDescription="@null"
             android:scaleType="centerCrop"
-            tools:src="@drawable/boy_with_luv"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/topBar" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/boy_with_luv" />
 
-        <!-- INFORMAÇÕES DA MÚSICA (Dinamicos) -->
         <TextView
             android:id="@+id/textTitulo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:textColor="#000000"
+            android:textColor="@color/roxo_escuro"
             android:textSize="18sp"
             android:textStyle="bold"
-            tools:text="Título da Música"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imgDestaque"
-            app:layout_constraintTop_toTopOf="@+id/imgDestaque" />
+            app:layout_constraintTop_toTopOf="@+id/imgDestaque"
+            tools:text="Título da Música" />
 
         <TextView
             android:id="@+id/textArtista"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="#6A4C6D"
+            android:textColor="@color/roxo_letra"
             android:textSize="13sp"
-            tools:text="Nome do Artista - 2026"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textTitulo"
-            app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+            app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+            tools:text="Nome do Artista - 2026" />
 
         <TextView
             android:id="@+id/textGenero"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="#D97706"
+            android:textColor="@color/laranja"
             android:textSize="13sp"
             android:textStyle="bold"
-            tools:text="Gênero: Pop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textTitulo"
-            app:layout_constraintTop_toBottomOf="@+id/textArtista" />
+            app:layout_constraintTop_toBottomOf="@+id/textArtista"
+            tools:text="Gênero: Pop" />
 
-        <!-- Ícones de Ação -->
-        <LinearLayout
-            android:id="@+id/layoutIcons"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="@+id/textTitulo"
-            app:layout_constraintTop_toBottomOf="@+id/textGenero">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_marginEnd="16dp"
-                android:contentDescription="@null"
-                android:src="@android:drawable/ic_media_play"
-                app:tint="#4A3B4E" />
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="@null"
-                android:src="@android:drawable/btn_star_big_off"
-                app:tint="#4A3B4E" />
-        </LinearLayout>
-
-        <!-- CARD NOTA DOS USUÁRIOS -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardNota"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="110dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="8dp"
-            app:cardBackgroundColor="#A48FA3"
+            app:cardBackgroundColor="@color/roxo_claro"
             app:cardCornerRadius="12dp"
             app:layout_constraintEnd_toStartOf="@+id/cardPlayerArea"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +102,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/label_nota_usuarios"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/branco"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
@@ -144,19 +111,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/branco"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     tools:text="4.5" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CARD DO PLAYER E CONTROLES -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardPlayerArea"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/branco"
             app:cardCornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardNota"
@@ -167,7 +133,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="8dp">
 
                 <RatingBar
                     android:id="@+id/ratingBar"
@@ -175,12 +141,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
+                    android:progressTint="@color/laranja"
                     tools:rating="4.5" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="6dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -189,18 +156,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
                         android:layout_marginEnd="4dp"
-                        android:backgroundTint="#D97706"
+                        android:backgroundTint="@color/laranja"
                         android:onClick="onClickPlay"
                         android:text="@string/btn_play"
+                        android:textColor="@color/branco"
                         android:textSize="10sp" />
 
                     <Button
                         android:id="@+id/btnStop"
                         android:layout_width="wrap_content"
                         android:layout_height="36dp"
-                        android:backgroundTint="#D97706"
+                        android:backgroundTint="@color/laranja"
                         android:onClick="onClickStop"
                         android:text="@string/btn_stop"
+                        android:textColor="@color/branco"
                         android:textSize="10sp" />
                 </LinearLayout>
 
@@ -208,22 +177,22 @@
                     android:id="@+id/btnEncerrar"
                     android:layout_width="match_parent"
                     android:layout_height="36dp"
-                    android:layout_marginTop="6dp"
-                    android:backgroundTint="#6A4C6D"
+                    android:layout_marginTop="4dp"
+                    android:backgroundTint="@color/roxo_medio"
                     android:onClick="onClickEncerrar"
                     android:text="@string/btn_encerrar"
+                    android:textColor="@color/branco"
                     android:textSize="10sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- REVIEWS DOS USUÁRIOS -->
         <TextView
             android:id="@+id/titleReviews"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="20dp"
             android:text="@string/title_reviews"
-            android:textColor="#4A3B4E"
+            android:textColor="@color/roxo_letra"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -234,17 +203,16 @@
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_marginTop="4dp"
-            android:background="#A48FA3"
+            android:background="@color/roxo_claro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titleReviews" />
 
-        <!-- CARD DO COMENTÁRIO -->
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            app:cardBackgroundColor="#FFFFFF"
+            app:cardBackgroundColor="@color/branco"
             app:cardCornerRadius="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -257,23 +225,24 @@
                 android:padding="12dp">
 
                 <TextView
-                    android:id="@+id/textNomeUsuario"
+                    android:id="@+id/textAvaliador"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#4A3B4E"
+                    android:textColor="@color/roxo_letra"
                     android:textStyle="bold"
                     tools:text="Usuário Exemplo" />
 
                 <TextView
-                    android:id="@+id/textDescricao"
+                    android:id="@+id/textAvaliacao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:textColor="#333333"
+                    android:textColor="@color/roxo_escuro"
                     android:textSize="12sp"
                     tools:text="Review ou história da música aqui..." />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
