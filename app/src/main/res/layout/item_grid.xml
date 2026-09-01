@@ -8,7 +8,7 @@
     android:layout_margin="6dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="2dp"
-    app:cardBackgroundColor="@color/branco">
+    style="@style/Base.Theme.Tracker">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:textColor="@color/laranja"
+            style="@style/CardGrid"
             android:maxLines="1"
             android:ellipsize="end" />
 

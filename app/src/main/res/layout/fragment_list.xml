@@ -6,4 +6,5 @@
     android:id="@+id/listViewMusicas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListMusic" />
+    tools:context=".ListMusic"
+    style="@style/Base.Theme.Tracker"/>

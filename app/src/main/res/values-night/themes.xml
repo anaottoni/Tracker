@@ -57,5 +57,13 @@
         <item name="colorOnSurface">@color/branco</item>
     </style>
 
+    <style name="CardGrid">
+        <item name="android:textColor">@color/branco</item>
+    </style>
+
+    <style name="CardList">
+        <item name="android:textColor">@color/branco</item>
+    </style>
+
 
 </resources>

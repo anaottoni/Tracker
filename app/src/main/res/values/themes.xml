@@ -69,4 +69,12 @@
         <item name="colorOnSurface">@color/roxo_letra</item>
     </style>
 
+    <style name="CardGrid">
+        <item name="android:textColor">@color/laranja</item>
+    </style>
+
+    <style name="CardList">
+        <item name="android:textColor">@color/roxo_letra</item>
+    </style>
+
 </resources>
