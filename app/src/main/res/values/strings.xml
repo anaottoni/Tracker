@@ -16,7 +16,7 @@
 
     <!--  STRINGS DAS GENEROS  -->
     <string-array name="generos">
-        <item>Funk</item>
+        <item>K-pop</item>
         <item>Sertanejo</item>
         <item>Pop</item>
         <item>Gospel</item>
@@ -28,4 +28,14 @@
     <string name="btn_play">Play</string>
     <string name="btn_stop">Stop</string>
     <string name="btn_encerrar">Encerrar</string>
+    <string name="bts">BTS</string>
+    <string name="nome_musica_kpop">Boy with Luv</string>
+    <string name="Samuel">Samuel Filho</string>
+    <string name="nome_musica_gospel">Filho da fé</string>
+    <string name="Sabrina">Sabrina Carpenter </string>
+    <string name="nome_musica_pop">House tour</string>
+    <string name="Jorge"> Jorge e Mateus</string>
+    <string name="nome_musica_sertanejo">Louca de saudade</string>
+    <string name="nota_musica_5">★★★★★</string>
+    <string name="nota_musica_4">★★★★</string>
 </resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/branco">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textNomeGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/laranja"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/textCantorGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="10sp"
+            android:textColor="@color/roxo_medio"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+        <ImageView
+            android:id="@+id/imageCapaGrid"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="6dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
