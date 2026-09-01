@@ -22,6 +22,16 @@
         <item>Gospel</item>
     </string-array>
 
+    <!--STRINGS FRAGMENT FILTRO-->
+    <string name="title_filtro">Filtrar Músicas</string>
+    <string name="label_filtro_button">Exibir resultados</string>
+    <string name="label_spinner_genero">Gênero</string>
+
+    <!--STRINGS TEMAS-->
+    <string name="label_tema_claro">Modo Claro</string>
+    <string name="label_tema_escuro">Modo Escuro</string>
+    <string name="label_tema_padrao">Padrão do Sistema</string>
+
     <!--STRINGS ACTIVITY EXTRA-->
     <string name="title_reviews">Reviews dos usuários</string>
     <string name="label_nota_usuarios">Nota dos usuários:</string>

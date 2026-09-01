@@ -12,13 +12,13 @@
         <menu>
             <item
                 android:id="@+id/theme_light"
-                android:title="Modo Claro" />
+                android:title="@string/label_tema_claro" />
             <item
                 android:id="@+id/theme_dark"
-                android:title="Modo Escuro" />
+                android:title="@string/label_tema_escuro" />
             <item
                 android:id="@+id/theme_system"
-                android:title="Padrão do Sistema" />
+                android:title="@string/label_tema_padrao" />
         </menu>
 
     </item>

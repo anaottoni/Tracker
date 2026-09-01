@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:text="Filtrar Músicas"
+        android:text="@string/title_filtro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         style="@style/TextoTitulo"/>
@@ -40,7 +40,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Gênero"
+                android:text="@string/label_spinner_genero"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Exibir resultado"
+        android:text="@string/label_filtro_button"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
