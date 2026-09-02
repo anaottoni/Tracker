@@ -10,10 +10,6 @@
         android:name="com.example.tracker.ListMusic"
         android:label=""
         tools:layout="@layout/fragment_list">
-
-<!--        <action-->
-<!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
-<!--            app:destination="@id/SecondFragment" />-->
     </fragment>
     <fragment
         android:id="@+id/GridFragment"
@@ -21,9 +17,6 @@
         android:label=""
         tools:layout="@layout/fragment_grid">
 
-<!--        <action-->
-<!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
-<!--            app:destination="@id/FirstFragment" />-->
     </fragment>
 
 
@@ -31,10 +24,6 @@
         android:id="@+id/FiltroFragment"
         android:name="com.example.tracker.FiltroFragment"
         android:label="">
-
-        <action
-            android:id="@+id/action_FiltroFragment_to_ListFragment"
-            app:destination="@+id/ListFragment"/>
     </fragment>
 
 </navigation>

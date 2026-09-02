@@ -35,9 +35,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
@@ -56,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
             NavController navController = navHostFragment.getNavController();
 
             // dizendo quais telas sao consideradas "principais" (para não mostrar o botão de voltar <- na barra superior quando o usuário estiver nelas)
-            appBarConfiguration = new AppBarConfiguration.Builder( R.id.FiltroFragment).build();
+            appBarConfiguration = new AppBarConfiguration.Builder(
+                    R.id.FiltroFragment, R.id.ListFragment, R.id.GridFragment).build();
 
             NavigationUI.setupActionBarWithNavController( this, navController, appBarConfiguration);
 

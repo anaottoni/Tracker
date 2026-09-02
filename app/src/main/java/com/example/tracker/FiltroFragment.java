@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.tracker.databinding.FragmentFiltroBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +28,8 @@ public class FiltroFragment extends Fragment {
 
     private Spinner spinner;
     private SharedViewModel viewModel;
+
+    private FragmentFiltroBinding binding;
 
     public FiltroFragment() {
         // Required empty public constructor
@@ -45,8 +51,8 @@ public class FiltroFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filtro, container, false);
+        binding = FragmentFiltroBinding.inflate(inflater, container, false);
+        return binding.getRoot();
     }
 
     // configurando o spinner apos a view carregar
@@ -88,7 +94,21 @@ public class FiltroFragment extends Fragment {
                 spinner.setDropDownHorizontalOffset(-spinner.getPaddingStart());
             }
         });
+
+        binding.button.setOnClickListener(v -> {
+            // Em vez de empilhar usando o NavController, nós mandamos o BottomNav mudar de aba.
+            // Isso garante que o Android gerencie a navegação do menu corretamente.
+            BottomNavigationView bottomNav = requireActivity().findViewById(R.id.bottomNav);
+            if (bottomNav != null) {
+                bottomNav.setSelectedItemId(R.id.ListFragment);
+            }
+        });
     }
 
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
 
 }
