@@ -5,11 +5,11 @@
         android:icon="@drawable/filtro_icon"
         android:title="Filtro"/>
     <item
-        android:id="@+id/FirstFragment"
+        android:id="@+id/ListFragment"
         android:icon="@drawable/listagem_icon"
         android:title="First" />
     <item
-        android:id="@+id/SecondFragment"
+        android:id="@+id/GridFragment"
         android:icon="@drawable/galeria_icon"
         android:title="Second" />
 
