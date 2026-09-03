@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/cinza_claro"
     android:fitsSystemWindows="true"
-    tools:context=".ActivityExtra"
-    >
+    tools:context=".ActivityExtra">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -26,223 +25,231 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Adicionado NestedScrollView com o layout_behavior da AppBar -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
+        android:fillViewport="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <ImageView
-            android:id="@+id/imgDestaque"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:contentDescription="@null"
-            android:scaleType="centerCrop"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/boy_with_luv" />
-
-        <TextView
-            android:id="@+id/textTitulo"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:textColor="@color/roxo_escuro"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imgDestaque"
-            app:layout_constraintTop_toTopOf="@+id/imgDestaque"
-            tools:text="Título da Música" />
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/textArtista"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/roxo_letra"
-            android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textTitulo"
-            app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-            tools:text="Nome do Artista - 2026" />
+            <ImageView
+                android:id="@+id/imgDestaque"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/boy_with_luv" />
 
-        <TextView
-            android:id="@+id/textGenero"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/laranja"
-            android:textSize="13sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textTitulo"
-            app:layout_constraintTop_toBottomOf="@+id/textArtista"
-            tools:text="Gênero: Pop" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardNota"
-            android:layout_width="0dp"
-            android:layout_height="110dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            app:cardBackgroundColor="@color/roxo_claro"
-            app:cardCornerRadius="12dp"
-            app:layout_constraintEnd_toStartOf="@+id/cardPlayerArea"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgDestaque">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/label_nota_usuarios"
-                    android:textColor="@color/branco"
-                    android:textSize="12sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textNotaMedia"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:textColor="@color/branco"
-                    android:textSize="22sp"
-                    android:textStyle="bold"
-                    tools:text="4.5" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardPlayerArea"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/branco"
-            app:cardCornerRadius="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cardNota"
-            app:layout_constraintTop_toTopOf="@+id/cardNota">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/textTitulo"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="8dp">
+                android:layout_marginStart="16dp"
+                android:textColor="@color/roxo_escuro"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgDestaque"
+                app:layout_constraintTop_toTopOf="@+id/imgDestaque"
+                tools:text="Título da Música" />
 
-                <RatingBar
-                    android:id="@+id/ratingBar"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:progressTint="@color/laranja"
-                    tools:rating="4.5" />
+            <TextView
+                android:id="@+id/textArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/roxo_letra"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+                tools:text="Nome do Artista - 2026" />
+
+            <TextView
+                android:id="@+id/textGenero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/laranja"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/textArtista"
+                tools:text="Gênero: Pop" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNota"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/roxo_claro"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/cardPlayerArea"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgDestaque">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_nota_usuarios"
+                        android:textColor="@color/branco"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textNotaMedia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textColor="@color/branco"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:text="4.5" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPlayerArea"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/branco"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardNota"
+                app:layout_constraintTop_toTopOf="@+id/cardNota">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:progressTint="@color/laranja"
+                        tools:rating="4.5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnPlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:layout_marginEnd="4dp"
+                            android:backgroundTint="@color/laranja"
+                            android:onClick="onClickPlay"
+                            android:text="@string/btn_play"
+                            android:textColor="@color/branco"
+                            android:textSize="10sp" />
+
+                        <Button
+                            android:id="@+id/btnStop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            android:backgroundTint="@color/laranja"
+                            android:onClick="onClickStop"
+                            android:text="@string/btn_stop"
+                            android:textColor="@color/branco"
+                            android:textSize="10sp" />
+                    </LinearLayout>
 
                     <Button
-                        android:id="@+id/btnPlay"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnEncerrar"
+                        android:layout_width="match_parent"
                         android:layout_height="36dp"
-                        android:layout_marginEnd="4dp"
-                        android:backgroundTint="@color/laranja"
-                        android:onClick="onClickPlay"
-                        android:text="@string/btn_play"
-                        android:textColor="@color/branco"
-                        android:textSize="10sp" />
-
-                    <Button
-                        android:id="@+id/btnStop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        android:backgroundTint="@color/laranja"
-                        android:onClick="onClickStop"
-                        android:text="@string/btn_stop"
+                        android:layout_marginTop="4dp"
+                        android:backgroundTint="@color/roxo_medio"
+                        android:onClick="onClickEncerrar"
+                        android:text="@string/btn_encerrar"
                         android:textColor="@color/branco"
                         android:textSize="10sp" />
                 </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                <Button
-                    android:id="@+id/btnEncerrar"
-                    android:layout_width="match_parent"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="4dp"
-                    android:backgroundTint="@color/roxo_medio"
-                    android:onClick="onClickEncerrar"
-                    android:text="@string/btn_encerrar"
-                    android:textColor="@color/branco"
-                    android:textSize="10sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/titleReviews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/title_reviews"
-            android:textColor="@color/roxo_letra"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardPlayerArea" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:background="@color/roxo_claro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleReviews" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            app:cardBackgroundColor="@color/branco"
-            app:cardCornerRadius="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider">
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/titleReviews"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
+                android:layout_marginTop="20dp"
+                android:text="@string/title_reviews"
+                android:textColor="@color/roxo_letra"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardPlayerArea" />
 
-                <TextView
-                    android:id="@+id/textAvaliador"
-                    android:layout_width="wrap_content"
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/roxo_claro"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleReviews" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:cardBackgroundColor="@color/branco"
+                app:cardCornerRadius="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/roxo_letra"
-                    android:textStyle="bold"
-                    tools:text="Usuário Exemplo" />
+                    android:orientation="vertical"
+                    android:padding="12dp">
 
-                <TextView
-                    android:id="@+id/textAvaliacao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:textColor="@color/roxo_escuro"
-                    android:textSize="12sp"
-                    tools:text="Review ou história da música aqui..." />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:id="@+id/textAvaliador"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/roxo_letra"
+                        android:textStyle="bold"
+                        tools:text="Usuário Exemplo" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:id="@+id/textAvaliacao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:textColor="@color/roxo_escuro"
+                        android:textSize="12sp"
+                        tools:text="Review ou história da música aqui..." />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

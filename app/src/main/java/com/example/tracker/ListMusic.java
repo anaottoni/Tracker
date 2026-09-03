@@ -55,60 +55,295 @@ public class ListMusic extends Fragment {
         // Lista com todas as músicas
         todasAsMusicas = new ArrayList<>();
 
-        todasAsMusicas.add(new ItemModel(
-                4,
-                getString(R.string.nome_musica_gospel),
-                "Gospel",
-                R.drawable.filho_da_fe,
-                R.raw.filho_da_fe,
-                2.0,
-                getString(R.string.Samuel),
-                2026,
-                "The love",
-                getString(R.string.avaliador_musica_gospel),
-                getString(R.string.avaliacao_musica_gospel)
+// ==================== K-POP ====================
+
+        listaMusicas.add(new ItemModel(
+                1,
+                getString(R.string.nome_musica_kpop_1),
+                "K-pop",
+                R.drawable.dynamite,
+                R.raw.dynamite,
+                9.5,
+                getString(R.string.bts),
+                2020,
+                getString(R.string.album_kpop_1),
+                getString(R.string.avaliador_kpop_1),
+                getString(R.string.avaliacao_kpop_1)
         ));
 
-        todasAsMusicas.add(new ItemModel(
-                1,
-                getString(R.string.nome_musica_kpop),
+        listaMusicas.add(new ItemModel(
+                2,
+                getString(R.string.nome_musica_kpop_2),
+                "K-pop",
+                R.drawable.butter,
+                R.raw.butter,
+                9.5,
+                getString(R.string.bts),
+                2021,
+                getString(R.string.album_kpop_2),
+                getString(R.string.avaliador_kpop_2),
+                getString(R.string.avaliacao_kpop_2)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                3,
+                getString(R.string.nome_musica_kpop_3),
+                "K-pop",
+                R.drawable.spring_day,
+                R.raw.spring_day,
+                10.0,
+                getString(R.string.bts),
+                2017,
+                getString(R.string.album_kpop_3),
+                getString(R.string.avaliador_kpop_3),
+                getString(R.string.avaliacao_kpop_3)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                4,
+                getString(R.string.nome_musica_kpop_4),
+                "K-pop",
+                R.drawable.fake_love,
+                R.raw.fake_love,
+                9.0,
+                getString(R.string.bts),
+                2018,
+                getString(R.string.album_kpop_4),
+                getString(R.string.avaliador_kpop_4),
+                getString(R.string.avaliacao_kpop_4)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                5,
+                getString(R.string.nome_musica_kpop_5),
                 "K-pop",
                 R.drawable.boy_with_luv,
                 R.raw.boy_with_luv,
-                5.0,
+                9.0,
                 getString(R.string.bts),
                 2019,
-                "Map of the Soul: Persona",
-                getString(R.string.avaliador_musica_kpop),
-                getString(R.string.avaliacao_musica_kpop)
+                getString(R.string.album_kpop_5),
+                getString(R.string.avaliador_kpop_5),
+                getString(R.string.avaliacao_kpop_5)
         ));
 
-        todasAsMusicas.add(new ItemModel(
-                2,
-                getString(R.string.nome_musica_sertanejo),
+
+// ==================== JORGE E MATEUS - SERTANEJO ====================
+
+        listaMusicas.add(new ItemModel(
+                6,
+                getString(R.string.nome_musica_sertanejo_1),
+                "Sertanejo",
+                R.drawable.amo_noite_e_dia,
+                R.raw.amo_noite_e_dia,
+                9.5,
+                getString(R.string.Jorge),
+                2010,
+                getString(R.string.album_sertanejo_1),
+                getString(R.string.avaliador_sertanejo_1),
+                getString(R.string.avaliacao_sertanejo_1)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                7,
+                getString(R.string.nome_musica_sertanejo_2),
+                "Sertanejo",
+                R.drawable.os_anjos_cantam,
+                R.raw.os_anjos_cantam,
+                9.5,
+                getString(R.string.Jorge),
+                2015,
+                getString(R.string.album_sertanejo_2),
+                getString(R.string.avaliador_sertanejo_2),
+                getString(R.string.avaliacao_sertanejo_2)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                8,
+                getString(R.string.nome_musica_sertanejo_3),
+                "Sertanejo",
+                R.drawable.propaganda,
+                R.raw.propaganda,
+                9.0,
+                getString(R.string.Jorge),
+                2018,
+                getString(R.string.album_sertanejo_3),
+                getString(R.string.avaliador_sertanejo_3),
+                getString(R.string.avaliacao_sertanejo_3)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                9,
+                getString(R.string.nome_musica_sertanejo_4),
+                "Sertanejo",
+                R.drawable.sosseguei,
+                R.raw.sosseguei,
+                9.5,
+                getString(R.string.Jorge),
+                2015,
+                getString(R.string.album_sertanejo_4),
+                getString(R.string.avaliador_sertanejo_4),
+                getString(R.string.avaliacao_sertanejo_4)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                10,
+                getString(R.string.nome_musica_sertanejo_5),
                 "Sertanejo",
                 R.drawable.louca_de_saudade,
                 R.raw.louca_de_saudade,
-                3.0,
+                9.0,
                 getString(R.string.Jorge),
                 2016,
-                "Como. Sempre Feito. Nunca",
-                getString(R.string.avaliador_musica_sertanejo),
-                getString(R.string.avaliacao_musica_sertanejo)
+                getString(R.string.album_sertanejo_5),
+                getString(R.string.avaliador_sertanejo_5),
+                getString(R.string.avaliacao_sertanejo_5)
         ));
 
-        todasAsMusicas.add(new ItemModel(
-                3,
-                getString(R.string.nome_musica_pop),
+
+// ==================== SABRINA CARPENTER - POP ====================
+
+        listaMusicas.add(new ItemModel(
+                11,
+                getString(R.string.nome_musica_pop_1),
+                "Pop",
+                R.drawable.espresso,
+                R.raw.espresso,
+                10.0,
+                getString(R.string.Sabrina),
+                2024,
+                getString(R.string.album_pop_1),
+                getString(R.string.avaliador_pop_1),
+                getString(R.string.avaliacao_pop_1)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                12,
+                getString(R.string.nome_musica_pop_2),
+                "Pop",
+                R.drawable.please_please_please,
+                R.raw.please_please_please,
+                9.5,
+                getString(R.string.Sabrina),
+                2024,
+                getString(R.string.album_pop_2),
+                getString(R.string.avaliador_pop_2),
+                getString(R.string.avaliacao_pop_2)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                13,
+                getString(R.string.nome_musica_pop_3),
+                "Pop",
+                R.drawable.feather,
+                R.raw.feather,
+                9.5,
+                getString(R.string.Sabrina),
+                2023,
+                getString(R.string.album_pop_3),
+                getString(R.string.avaliador_pop_3),
+                getString(R.string.avaliacao_pop_3)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                14,
+                getString(R.string.nome_musica_pop_4),
+                "Pop",
+                R.drawable.nonsense,
+                R.raw.nonsense,
+                9.0,
+                getString(R.string.Sabrina),
+                2022,
+                getString(R.string.album_pop_4),
+                getString(R.string.avaliador_pop_4),
+                getString(R.string.avaliacao_pop_4)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                15,
+                getString(R.string.nome_musica_pop_5),
                 "Pop",
                 R.drawable.house_tour,
                 R.raw.house_tour,
-                4.0,
+                9.0,
                 getString(R.string.Sabrina),
                 2025,
-                "Man's Best Friend",
-                getString(R.string.avaliador_musica_pop),
-                getString(R.string.avaliacao_musica_pop)
+                getString(R.string.album_pop_5),
+                getString(R.string.avaliador_pop_5),
+                getString(R.string.avaliacao_pop_5)
+        ));
+
+
+// ==================== GOSPEL ====================
+
+        listaMusicas.add(new ItemModel(
+                16,
+                getString(R.string.nome_musica_gospel_1),
+                "Gospel",
+                R.drawable.filho_da_fe,
+                R.raw.filho_da_fe,
+                9.0,
+                getString(R.string.Samuel),
+                2026,
+                getString(R.string.album_gospel_1),
+                getString(R.string.avaliador_gospel_1),
+                getString(R.string.avaliacao_gospel_1)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                17,
+                getString(R.string.nome_musica_gospel_2),
+                "Gospel",
+                R.drawable.aquieta_minha_alma,
+                R.raw.aquieta_minha_alma,
+                9.5,
+                getString(R.string.Samuel),
+                2015,
+                getString(R.string.album_gospel_2),
+                getString(R.string.avaliador_gospel_2),
+                getString(R.string.avaliacao_gospel_2)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                18,
+                getString(R.string.nome_musica_gospel_3),
+                "Gospel",
+                R.drawable.todavia_me_alegrarei,
+                R.raw.todavia_me_alegrarei,
+                9.5,
+                getString(R.string.Samuel),
+                2020,
+                getString(R.string.album_gospel_3),
+                getString(R.string.avaliador_gospel_3),
+                getString(R.string.avaliacao_gospel_3)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                19,
+                getString(R.string.nome_musica_gospel_4),
+                "Gospel",
+                R.drawable.lugar_secreto,
+                R.raw.lugar_secreto,
+                10.0,
+                getString(R.string.Samuel),
+                2018,
+                getString(R.string.album_gospel_4),
+                getString(R.string.avaliador_gospel_4),
+                getString(R.string.avaliacao_gospel_4)
+        ));
+
+        listaMusicas.add(new ItemModel(
+                20,
+                getString(R.string.nome_musica_gospel_5),
+                "Gospel",
+                R.drawable.ousado_amor,
+                R.raw.ousado_amor,
+                9.5,
+                getString(R.string.Samuel),
+                2018,
+                getString(R.string.album_gospel_5),
+                getString(R.string.avaliador_gospel_5),
+                getString(R.string.avaliacao_gospel_5)
         ));
 
         // Lista que será exibida

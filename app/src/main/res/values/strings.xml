@@ -1,12 +1,17 @@
 <resources>
+
     <string name="app_name">Tracker</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
+
+    <!-- Strings usadas pelos fragments de navegação -->
     <string name="activity_extra">Track Details</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <!--  STRINGS DAS GENEROS  -->
+
+    <!-- ====================================================== -->
+    <!-- GÊNEROS -->
+    <!-- ====================================================== -->
+
     <string-array name="generos">
         <item>K-pop</item>
         <item>Sertanejo</item>
@@ -14,17 +19,29 @@
         <item>Gospel</item>
     </string-array>
 
-    <!--STRINGS FRAGMENT FILTRO-->
+
+    <!-- ====================================================== -->
+    <!-- FRAGMENT FILTRO -->
+    <!-- ====================================================== -->
+
     <string name="title_filtro">Filtrar Músicas</string>
     <string name="label_filtro_button">Exibir resultados</string>
     <string name="label_spinner_genero">Gênero</string>
 
-    <!--STRINGS TEMAS-->
+
+    <!-- ====================================================== -->
+    <!-- TEMAS -->
+    <!-- ====================================================== -->
+
     <string name="label_tema_claro">Modo Claro</string>
     <string name="label_tema_escuro">Modo Escuro</string>
     <string name="label_tema_padrao">Padrão do Sistema</string>
 
-    <!--STRINGS ACTIVITY EXTRA-->
+
+    <!-- ====================================================== -->
+    <!-- ACTIVITY EXTRA -->
+    <!-- ====================================================== -->
+
     <string name="title_reviews">Reviews dos usuários</string>
     <string name="label_nota_usuarios">Nota dos usuários:</string>
     <string name="btn_play">Play</string>
@@ -32,29 +49,157 @@
     <string name="btn_encerrar">Encerrar</string>
 
 
-    <string name="bts">BTS</string>
-    <string name="nome_musica_kpop">Boy with Luv</string>
-    <string name="avaliacao_musica_kpop">Melhor do Ano</string>
-    <string name="avaliador_musica_kpop">Ana Beatriz</string>
+    <!-- ====================================================== -->
+    <!-- ====================== BTS ============================ -->
+    <!-- ====================================================== -->
 
+    <string name="bts">BTS</string>
+
+    <!-- Música 1 -->
+    <string name="nome_musica_kpop_1">Dynamite</string>
+    <string name="album_kpop_1">BE</string>
+    <string name="avaliador_kpop_1">Ana Beatriz</string>
+    <string name="avaliacao_kpop_1">Uma música muito animada e divertida.</string>
+
+    <!-- Música 2 -->
+    <string name="nome_musica_kpop_2">Butter</string>
+    <string name="album_kpop_2">Butter</string>
+    <string name="avaliador_kpop_2">Ana Beatriz</string>
+    <string name="avaliacao_kpop_2">Uma música leve e muito contagiante.</string>
+
+    <!-- Música 3 -->
+    <string name="nome_musica_kpop_3">Spring Day</string>
+    <string name="album_kpop_3">You Never Walk Alone</string>
+    <string name="avaliador_kpop_3">Ana Beatriz</string>
+    <string name="avaliacao_kpop_3">Uma música emocionante e marcante.</string>
+
+    <!-- Música 4 -->
+    <string name="nome_musica_kpop_4">Fake Love</string>
+    <string name="album_kpop_4">Love Yourself: Tear</string>
+    <string name="avaliador_kpop_4">Ana Beatriz</string>
+    <string name="avaliacao_kpop_4">Uma música intensa e muito bem produzida.</string>
+
+    <!-- Música 5 -->
+    <string name="nome_musica_kpop_5">Boy with Luv</string>
+    <string name="album_kpop_5">Map of the Soul: Persona</string>
+    <string name="avaliador_kpop_5">Ana Beatriz</string>
+    <string name="avaliacao_kpop_5">Melhor do Ano</string>
+
+
+    <!-- ====================================================== -->
+    <!-- ================= JORGE E MATEUS ===================== -->
+    <!-- ====================================================== -->
+
+    <string name="Jorge">Jorge e Mateus</string>
+
+    <!-- Música 1 -->
+    <string name="nome_musica_sertanejo_1">Amo Noite e Dia</string>
+    <string name="album_sertanejo_1">Aí Já Era</string>
+    <string name="avaliador_sertanejo_1">Ana Clara</string>
+    <string name="avaliacao_sertanejo_1">Uma música romântica e inesquecível.</string>
+
+    <!-- Música 2 -->
+    <string name="nome_musica_sertanejo_2">Os Anjos Cantam</string>
+    <string name="album_sertanejo_2">Pelo Amor de Deus</string>
+    <string name="avaliador_sertanejo_2">Ana Clara</string>
+    <string name="avaliacao_sertanejo_2">Uma das músicas mais emocionantes da dupla.</string>
+
+    <!-- Música 3 -->
+    <string name="nome_musica_sertanejo_3">Propaganda</string>
+    <string name="album_sertanejo_3">Terra Sem CEP</string>
+    <string name="avaliador_sertanejo_3">Ana Clara</string>
+    <string name="avaliacao_sertanejo_3">Muito divertida e fácil de cantar junto.</string>
+
+    <!-- Música 4 -->
+    <string name="nome_musica_sertanejo_4">Sosseguei</string>
+    <string name="album_sertanejo_4">Pelo Amor de Deus</string>
+    <string name="avaliador_sertanejo_4">Ana Clara</string>
+    <string name="avaliacao_sertanejo_4">Uma música romântica e muito gostosa de ouvir.</string>
+
+    <!-- Música 5 -->
+    <string name="nome_musica_sertanejo_5">Louca de Saudade</string>
+    <string name="album_sertanejo_5">Como. Sempre Feito. Nunca.</string>
+    <string name="avaliador_sertanejo_5">Ana Clara</string>
+    <string name="avaliacao_sertanejo_5">Sofrendo muito com essa</string>
+
+
+    <!-- ====================================================== -->
+    <!-- ================= SABRINA CARPENTER ================== -->
+    <!-- ====================================================== -->
+
+    <string name="Sabrina">Sabrina Carpenter</string>
+
+    <!-- Música 1 -->
+    <string name="nome_musica_pop_1">Espresso</string>
+    <string name="album_pop_1">Short n' Sweet</string>
+    <string name="avaliador_pop_1">Sofia</string>
+    <string name="avaliacao_pop_1">Um hit super divertido e viciante.</string>
+
+    <!-- Música 2 -->
+    <string name="nome_musica_pop_2">Please Please Please</string>
+    <string name="album_pop_2">Short n' Sweet</string>
+    <string name="avaliador_pop_2">Sofia</string>
+    <string name="avaliacao_pop_2">Uma música muito divertida e marcante.</string>
+
+    <!-- Música 3 -->
+    <string name="nome_musica_pop_3">Feather</string>
+    <string name="album_pop_3">Emails I Can't Send</string>
+    <string name="avaliador_pop_3">Sofia</string>
+    <string name="avaliacao_pop_3">Leve, divertida e muito gostosa de ouvir.</string>
+
+    <!-- Música 4 -->
+    <string name="nome_musica_pop_4">Nonsense</string>
+    <string name="album_pop_4">Emails I Can't Send</string>
+    <string name="avaliador_pop_4">Sofia</string>
+    <string name="avaliacao_pop_4">Uma música criativa e muito divertida.</string>
+
+    <!-- Música 5 -->
+    <string name="nome_musica_pop_5">House Tour</string>
+    <string name="album_pop_5">Man's Best Friend</string>
+    <string name="avaliador_pop_5">Sofia</string>
+    <string name="avaliacao_pop_5">Amei esse hit</string>
+
+
+    <!-- ====================================================== -->
+    <!-- ======================= GOSPEL ======================= -->
+    <!-- ====================================================== -->
 
     <string name="Samuel">Samuel Filho</string>
-    <string name="nome_musica_gospel">Filho da fé</string>
-    <string name="avaliacao_musica_gospel">Louvor lindo</string>
-    <string name="avaliador_musica_gospel">Maria Eduarda</string>
+
+    <!-- Música 1 -->
+    <string name="nome_musica_gospel_1">Filho da Fé</string>
+    <string name="album_gospel_1">The Love</string>
+    <string name="avaliador_gospel_1">Maria Eduarda</string>
+    <string name="avaliacao_gospel_1">Louvor lindo</string>
+
+    <!-- Música 2 -->
+    <string name="nome_musica_gospel_2">Aquieta Minh'alma</string>
+    <string name="album_gospel_2">Aquieta Minh'alma</string>
+    <string name="avaliador_gospel_2">Maria Eduarda</string>
+    <string name="avaliacao_gospel_2">Uma música que transmite muita paz.</string>
+
+    <!-- Música 3 -->
+    <string name="nome_musica_gospel_3">Todavia Me Alegrarei</string>
+    <string name="album_gospel_3">Todavia Me Alegrarei</string>
+    <string name="avaliador_gospel_3">Maria Eduarda</string>
+    <string name="avaliacao_gospel_3">Uma mensagem muito bonita de fé.</string>
+
+    <!-- Música 4 -->
+    <string name="nome_musica_gospel_4">Lugar Secreto</string>
+    <string name="album_gospel_4">Pra Onde Iremos?</string>
+    <string name="avaliador_gospel_4">Maria Eduarda</string>
+    <string name="avaliacao_gospel_4">Um louvor muito especial.</string>
+
+    <!-- Música 5 -->
+    <string name="nome_musica_gospel_5">Ousado Amor</string>
+    <string name="album_gospel_5">Ousado Amor</string>
+    <string name="avaliador_gospel_5">Maria Eduarda</string>
+    <string name="avaliacao_gospel_5">Uma música emocionante sobre o amor de Deus.</string>
 
 
-    <string name="Sabrina">Sabrina Carpenter </string>
-    <string name="nome_musica_pop">House tour</string>
-    <string name="avaliacao_musica_pop">Amei esse hit</string>
-    <string name="avaliador_musica_pop">Sofia</string>
-
-
-    <string name="Jorge"> Jorge e Mateus</string>
-    <string name="nome_musica_sertanejo">Louca de saudade</string>
-    <string name="avaliacao_musica_sertanejo">Sofrendo muito com essa</string>
-    <string name="avaliador_musica_sertanejo">Ana Clara</string>
-
+    <!-- ====================================================== -->
+    <!-- NOTAS -->
+    <!-- ====================================================== -->
 
     <string name="nota_musica_5">★★★★★</string>
     <string name="nota_musica_4">★★★★</string>
