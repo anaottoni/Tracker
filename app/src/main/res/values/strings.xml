@@ -56,25 +56,25 @@
     <string name="bts">BTS</string>
 
     <!-- Música 1 -->
-    <string name="nome_musica_kpop_1">Dynamite</string>
+    <string name="nome_musica_kpop_1">Spring Day</string>
     <string name="album_kpop_1">BE</string>
     <string name="avaliador_kpop_1">Ana Beatriz</string>
     <string name="avaliacao_kpop_1">Uma música muito animada e divertida.</string>
 
     <!-- Música 2 -->
-    <string name="nome_musica_kpop_2">Butter</string>
-    <string name="album_kpop_2">Butter</string>
+    <string name="nome_musica_kpop_2">DNA</string>
+    <string name="album_kpop_2">DNA</string>
     <string name="avaliador_kpop_2">Ana Beatriz</string>
     <string name="avaliacao_kpop_2">Uma música leve e muito contagiante.</string>
 
     <!-- Música 3 -->
-    <string name="nome_musica_kpop_3">Spring Day</string>
-    <string name="album_kpop_3">You Never Walk Alone</string>
+    <string name="nome_musica_kpop_3">Black Swan</string>
+    <string name="album_kpop_3">Black Swan</string>
     <string name="avaliador_kpop_3">Ana Beatriz</string>
     <string name="avaliacao_kpop_3">Uma música emocionante e marcante.</string>
 
     <!-- Música 4 -->
-    <string name="nome_musica_kpop_4">Fake Love</string>
+    <string name="nome_musica_kpop_4">run</string>
     <string name="album_kpop_4">Love Yourself: Tear</string>
     <string name="avaliador_kpop_4">Ana Beatriz</string>
     <string name="avaliacao_kpop_4">Uma música intensa e muito bem produzida.</string>
@@ -99,19 +99,19 @@
     <string name="avaliacao_sertanejo_1">Uma música romântica e inesquecível.</string>
 
     <!-- Música 2 -->
-    <string name="nome_musica_sertanejo_2">Os Anjos Cantam</string>
+    <string name="nome_musica_sertanejo_2">Voa Flor</string>
     <string name="album_sertanejo_2">Pelo Amor de Deus</string>
     <string name="avaliador_sertanejo_2">Ana Clara</string>
     <string name="avaliacao_sertanejo_2">Uma das músicas mais emocionantes da dupla.</string>
 
     <!-- Música 3 -->
-    <string name="nome_musica_sertanejo_3">Propaganda</string>
+    <string name="nome_musica_sertanejo_3">Seu astral</string>
     <string name="album_sertanejo_3">Terra Sem CEP</string>
     <string name="avaliador_sertanejo_3">Ana Clara</string>
     <string name="avaliacao_sertanejo_3">Muito divertida e fácil de cantar junto.</string>
 
     <!-- Música 4 -->
-    <string name="nome_musica_sertanejo_4">Sosseguei</string>
+    <string name="nome_musica_sertanejo_4">Anjos Cantam</string>
     <string name="album_sertanejo_4">Pelo Amor de Deus</string>
     <string name="avaliador_sertanejo_4">Ana Clara</string>
     <string name="avaliacao_sertanejo_4">Uma música romântica e muito gostosa de ouvir.</string>
@@ -173,13 +173,13 @@
     <string name="avaliacao_gospel_1">Louvor lindo</string>
 
     <!-- Música 2 -->
-    <string name="nome_musica_gospel_2">Aquieta Minh\'alma</string>
+    <string name="nome_musica_gospel_2">Lugar Secreto</string>
     <string name="album_gospel_2">Aquieta Minh\'alma</string>
     <string name="avaliador_gospel_2">Maria Eduarda</string>
     <string name="avaliacao_gospel_2">Uma música que transmite muita paz.</string>
 
     <!-- Música 3 -->
-    <string name="nome_musica_gospel_3">Todavia Me Alegrarei</string>
+    <string name="nome_musica_gospel_3">Ousado Amor</string>
     <string name="album_gospel_3">Todavia Me Alegrarei</string>
     <string name="avaliador_gospel_3">Maria Eduarda</string>
     <string name="avaliacao_gospel_3">Uma mensagem muito bonita de fé.</string>
@@ -191,7 +191,7 @@
     <string name="avaliacao_gospel_4">Um louvor muito especial.</string>
 
     <!-- Música 5 -->
-    <string name="nome_musica_gospel_5">Ousado Amor</string>
+    <string name="nome_musica_gospel_5">Raridade</string>
     <string name="album_gospel_5">Ousado Amor</string>
     <string name="avaliador_gospel_5">Maria Eduarda</string>
     <string name="avaliacao_gospel_5">Uma música emocionante sobre o amor de Deus.</string>

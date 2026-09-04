@@ -22,7 +22,6 @@ public class GridMusic extends Fragment {
     private GridAdapter adapter;
     private List<ItemModel> listaMusicas;
     private SharedViewModel viewModel;
-    private List<ItemModel> todasAsMusicas;
 
     @Override
     public View onCreateView(
@@ -49,15 +48,15 @@ public class GridMusic extends Fragment {
         viewModel = new ViewModelProvider(requireActivity())
                 .get(SharedViewModel.class);
 
-        todasAsMusicas = new ArrayList<>();
+        listaMusicas = new ArrayList<>();
 
 // ==================== K-POP ====================
 
-        todasAsMusicas.add(new ItemModel(
+        listaMusicas.add(new ItemModel(
                 1,
                 getString(R.string.nome_musica_kpop_1),
                 "K-pop",
-                R.drawable.boy_with_luv,
+                R.drawable.springday,
                 R.raw.spring_day    ,
                 9.5,
                 getString(R.string.bts),
@@ -67,11 +66,11 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_1)
         ));
 
-        todasAsMusicas.add(new ItemModel(
+        listaMusicas.add(new ItemModel(
                 2,
                 getString(R.string.nome_musica_kpop_2),
                 "K-pop",
-                R.drawable.boy_with_luv,
+                R.drawable.dna,
                 R.raw.dna,
                 9.5,
                 getString(R.string.bts),
@@ -81,11 +80,11 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_2)
         ));
 
-        todasAsMusicas.add(new ItemModel(
+        listaMusicas.add(new ItemModel(
                 3,
                 getString(R.string.nome_musica_kpop_3),
                 "K-pop",
-                R.drawable.boy_with_luv,
+                R.drawable.blackswan,
                 R.raw.black_swan,
                 10.0,
                 getString(R.string.bts),
@@ -95,11 +94,11 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_3)
         ));
 
-        todasAsMusicas.add(new ItemModel(
+        listaMusicas.add(new ItemModel(
                 4,
                 getString(R.string.nome_musica_kpop_4),
                 "K-pop",
-                R.drawable.boy_with_luv,
+                R.drawable.runbts,
                 R.raw.run,
                 9.0,
                 getString(R.string.bts),
@@ -130,7 +129,7 @@ public class GridMusic extends Fragment {
                 6,
                 getString(R.string.nome_musica_sertanejo_1),
                 "Sertanejo",
-                R.drawable.louca_de_saudade,
+                R.drawable.noite_dia,
                 R.raw.noite_dia,
                 9.5,
                 getString(R.string.Jorge),
@@ -144,7 +143,7 @@ public class GridMusic extends Fragment {
                 7,
                 getString(R.string.nome_musica_sertanejo_2),
                 "Sertanejo",
-                R.drawable.louca_de_saudade,
+                R.drawable.voa_flor,
                 R.raw.voa_flor,
                 9.5,
                 getString(R.string.Jorge),
@@ -158,7 +157,7 @@ public class GridMusic extends Fragment {
                 8,
                 getString(R.string.nome_musica_sertanejo_3),
                 "Sertanejo",
-                R.drawable.louca_de_saudade,
+                R.drawable.seu_astral,
                 R.raw.seu_astral,
                 9.0,
                 getString(R.string.Jorge),
@@ -172,7 +171,7 @@ public class GridMusic extends Fragment {
                 9,
                 getString(R.string.nome_musica_sertanejo_4),
                 "Sertanejo",
-                R.drawable.louca_de_saudade,
+                R.drawable.anjos_cantam,
                 R.raw.anjos_cantam,
                 9.5,
                 getString(R.string.Jorge),
@@ -203,7 +202,7 @@ public class GridMusic extends Fragment {
                 11,
                 getString(R.string.nome_musica_pop_1),
                 "Pop",
-                R.drawable.house_tour,
+                R.drawable.expresso,
                 R.raw.expresso,
                 10.0,
                 getString(R.string.Sabrina),
@@ -217,7 +216,7 @@ public class GridMusic extends Fragment {
                 12,
                 getString(R.string.nome_musica_pop_2),
                 "Pop",
-                R.drawable.boy_with_luv,
+                R.drawable.please,
                 R.raw.please,
                 9.5,
                 getString(R.string.Sabrina),
@@ -231,7 +230,7 @@ public class GridMusic extends Fragment {
                 13,
                 getString(R.string.nome_musica_pop_3),
                 "Pop",
-                R.drawable.house_tour,
+                R.drawable.feather,
                 R.raw.feather,
                 9.5,
                 getString(R.string.Sabrina),
@@ -245,7 +244,7 @@ public class GridMusic extends Fragment {
                 14,
                 getString(R.string.nome_musica_pop_4),
                 "Pop",
-                R.drawable.house_tour,
+                R.drawable.nonsense,
                 R.raw.nonsense,
                 9.0,
                 getString(R.string.Sabrina),
@@ -290,7 +289,7 @@ public class GridMusic extends Fragment {
                 17,
                 getString(R.string.nome_musica_gospel_2),
                 "Gospel",
-                R.drawable.filho_da_fe,
+                R.drawable.lugarsecreto,
                 R.raw.lugar_secreto,
                 9.5,
                 getString(R.string.Samuel),
@@ -304,7 +303,7 @@ public class GridMusic extends Fragment {
                 18,
                 getString(R.string.nome_musica_gospel_3),
                 "Gospel",
-                R.drawable.filho_da_fe,
+                R.drawable.ousado,
                 R.raw.ousado_amor,
                 9.5,
                 getString(R.string.Samuel),
@@ -318,7 +317,7 @@ public class GridMusic extends Fragment {
                 19,
                 getString(R.string.nome_musica_gospel_4),
                 "Gospel",
-                R.drawable.filho_da_fe,
+                R.drawable.raridade,
                 R.raw.raridade,
                 10.0,
                 getString(R.string.Samuel),
@@ -332,7 +331,7 @@ public class GridMusic extends Fragment {
                 20,
                 getString(R.string.nome_musica_gospel_5),
                 "Gospel",
-                R.drawable.filho_da_fe,
+                R.drawable.faz_chover,
                 R.raw.faz_chover,
                 9.5,
                 getString(R.string.Samuel),
@@ -342,7 +341,7 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_5)
         ));
 
-        listaMusicas = new ArrayList<>(todasAsMusicas);
+        listaMusicas = new ArrayList<>(listaMusicas);
 
         adapter = new GridAdapter(
                 requireContext(),
@@ -357,7 +356,7 @@ public class GridMusic extends Fragment {
 
                     List<ItemModel> musicasFiltradas = new ArrayList<>();
 
-                    for (ItemModel musica : todasAsMusicas) {
+                    for (ItemModel musica : listaMusicas) {
 
                         if (musica.getGenero().equalsIgnoreCase(genero)) {
                             musicasFiltradas.add(musica);
