@@ -11,6 +11,7 @@ import android.widget.GridView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,8 @@ public class GridMusic extends Fragment {
     private GridView gridViewMusicas;
     private GridAdapter adapter;
     private List<ItemModel> listaMusicas;
+    private SharedViewModel viewModel;
+    private List<ItemModel> todasAsMusicas;
 
     @Override
     public View onCreateView(
@@ -43,11 +46,14 @@ public class GridMusic extends Fragment {
 
         gridViewMusicas = view.findViewById(R.id.gridViewMusicas);
 
-        listaMusicas = new ArrayList<>();
+        viewModel = new ViewModelProvider(requireActivity())
+                .get(SharedViewModel.class);
+
+        todasAsMusicas = new ArrayList<>();
 
 // ==================== K-POP ====================
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 1,
                 getString(R.string.nome_musica_kpop_1),
                 "K-pop",
@@ -61,7 +67,7 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_1)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 2,
                 getString(R.string.nome_musica_kpop_2),
                 "K-pop",
@@ -75,7 +81,7 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_2)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 3,
                 getString(R.string.nome_musica_kpop_3),
                 "K-pop",
@@ -89,7 +95,7 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_3)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 4,
                 getString(R.string.nome_musica_kpop_4),
                 "K-pop",
@@ -336,12 +342,31 @@ public class GridMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_5)
         ));
 
+        listaMusicas = new ArrayList<>(todasAsMusicas);
+
         adapter = new GridAdapter(
                 requireContext(),
                 listaMusicas
         );
 
         gridViewMusicas.setAdapter(adapter);
+
+        viewModel.getGeneroSelecionado().observe(
+                getViewLifecycleOwner(),
+                genero -> {
+
+                    List<ItemModel> musicasFiltradas = new ArrayList<>();
+
+                    for (ItemModel musica : todasAsMusicas) {
+
+                        if (musica.getGenero().equalsIgnoreCase(genero)) {
+                            musicasFiltradas.add(musica);
+                        }
+                    }
+
+                    adapter.atualizarLista(musicasFiltradas);
+                }
+        );
 
         gridViewMusicas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -55,4 +55,10 @@ public class GridAdapter extends BaseAdapter {
 
         return convertView;
     }
+
+    public void atualizarLista(List<ItemModel> novaLista) {
+        listaMusicas.clear();
+        listaMusicas.addAll(novaLista);
+        notifyDataSetChanged();
+    }
 }

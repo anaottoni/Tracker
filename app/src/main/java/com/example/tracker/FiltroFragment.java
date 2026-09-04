@@ -96,8 +96,6 @@ public class FiltroFragment extends Fragment {
         });
 
         binding.button.setOnClickListener(v -> {
-            // Em vez de empilhar usando o NavController, nós mandamos o BottomNav mudar de aba.
-            // Isso garante que o Android gerencie a navegação do menu corretamente.
             BottomNavigationView bottomNav = requireActivity().findViewById(R.id.bottomNav);
             if (bottomNav != null) {
                 bottomNav.setSelectedItemId(R.id.ListFragment);
