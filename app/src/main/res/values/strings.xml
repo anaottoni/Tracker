@@ -131,31 +131,31 @@
 
     <!-- Música 1 -->
     <string name="nome_musica_pop_1">Espresso</string>
-    <string name="album_pop_1">Short n' Sweet</string>
+    <string name="album_pop_1">Short n\' Sweet</string>
     <string name="avaliador_pop_1">Sofia</string>
     <string name="avaliacao_pop_1">Um hit super divertido e viciante.</string>
 
     <!-- Música 2 -->
     <string name="nome_musica_pop_2">Please Please Please</string>
-    <string name="album_pop_2">Short n' Sweet</string>
+    <string name="album_pop_2">Short n\' Sweet</string>
     <string name="avaliador_pop_2">Sofia</string>
     <string name="avaliacao_pop_2">Uma música muito divertida e marcante.</string>
 
     <!-- Música 3 -->
     <string name="nome_musica_pop_3">Feather</string>
-    <string name="album_pop_3">Emails I Can't Send</string>
+    <string name="album_pop_3">Emails I Can\'t Send</string>
     <string name="avaliador_pop_3">Sofia</string>
     <string name="avaliacao_pop_3">Leve, divertida e muito gostosa de ouvir.</string>
 
     <!-- Música 4 -->
     <string name="nome_musica_pop_4">Nonsense</string>
-    <string name="album_pop_4">Emails I Can't Send</string>
+    <string name="album_pop_4">Emails I Can\'t Send</string>
     <string name="avaliador_pop_4">Sofia</string>
     <string name="avaliacao_pop_4">Uma música criativa e muito divertida.</string>
 
     <!-- Música 5 -->
     <string name="nome_musica_pop_5">House Tour</string>
-    <string name="album_pop_5">Man's Best Friend</string>
+    <string name="album_pop_5">Man\'s Best Friend</string>
     <string name="avaliador_pop_5">Sofia</string>
     <string name="avaliacao_pop_5">Amei esse hit</string>
 
@@ -173,8 +173,8 @@
     <string name="avaliacao_gospel_1">Louvor lindo</string>
 
     <!-- Música 2 -->
-    <string name="nome_musica_gospel_2">Aquieta Minh'alma</string>
-    <string name="album_gospel_2">Aquieta Minh'alma</string>
+    <string name="nome_musica_gospel_2">Aquieta Minh\'alma</string>
+    <string name="album_gospel_2">Aquieta Minh\'alma</string>
     <string name="avaliador_gospel_2">Maria Eduarda</string>
     <string name="avaliacao_gospel_2">Uma música que transmite muita paz.</string>
 

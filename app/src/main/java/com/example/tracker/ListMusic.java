@@ -21,7 +21,6 @@ public class ListMusic extends Fragment {
     private ItemAdapter adapter;
 
     private List<ItemModel> todasAsMusicas;
-    private List<ItemModel> listaMusicas;
 
     private SharedViewModel viewModel;
 
@@ -57,12 +56,12 @@ public class ListMusic extends Fragment {
 
 // ==================== K-POP ====================
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 1,
                 getString(R.string.nome_musica_kpop_1),
                 "K-pop",
-                R.drawable.dynamite,
-                R.raw.dynamite,
+                R.drawable.boy_with_luv,
+                R.raw.spring_day    ,
                 9.5,
                 getString(R.string.bts),
                 2020,
@@ -71,12 +70,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_1)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 2,
                 getString(R.string.nome_musica_kpop_2),
                 "K-pop",
-                R.drawable.butter,
-                R.raw.butter,
+                R.drawable.boy_with_luv,
+                R.raw.dna,
                 9.5,
                 getString(R.string.bts),
                 2021,
@@ -85,12 +84,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_2)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 3,
                 getString(R.string.nome_musica_kpop_3),
                 "K-pop",
-                R.drawable.spring_day,
-                R.raw.spring_day,
+                R.drawable.boy_with_luv,
+                R.raw.black_swan,
                 10.0,
                 getString(R.string.bts),
                 2017,
@@ -99,12 +98,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_3)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 4,
                 getString(R.string.nome_musica_kpop_4),
                 "K-pop",
-                R.drawable.fake_love,
-                R.raw.fake_love,
+                R.drawable.boy_with_luv,
+                R.raw.run,
                 9.0,
                 getString(R.string.bts),
                 2018,
@@ -113,7 +112,7 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_kpop_4)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 5,
                 getString(R.string.nome_musica_kpop_5),
                 "K-pop",
@@ -130,12 +129,12 @@ public class ListMusic extends Fragment {
 
 // ==================== JORGE E MATEUS - SERTANEJO ====================
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 6,
                 getString(R.string.nome_musica_sertanejo_1),
                 "Sertanejo",
-                R.drawable.amo_noite_e_dia,
-                R.raw.amo_noite_e_dia,
+                R.drawable.louca_de_saudade,
+                R.raw.noite_dia,
                 9.5,
                 getString(R.string.Jorge),
                 2010,
@@ -144,12 +143,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_sertanejo_1)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 7,
                 getString(R.string.nome_musica_sertanejo_2),
                 "Sertanejo",
-                R.drawable.os_anjos_cantam,
-                R.raw.os_anjos_cantam,
+                R.drawable.louca_de_saudade,
+                R.raw.voa_flor,
                 9.5,
                 getString(R.string.Jorge),
                 2015,
@@ -158,12 +157,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_sertanejo_2)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 8,
                 getString(R.string.nome_musica_sertanejo_3),
                 "Sertanejo",
-                R.drawable.propaganda,
-                R.raw.propaganda,
+                R.drawable.louca_de_saudade,
+                R.raw.seu_astral,
                 9.0,
                 getString(R.string.Jorge),
                 2018,
@@ -172,12 +171,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_sertanejo_3)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 9,
                 getString(R.string.nome_musica_sertanejo_4),
                 "Sertanejo",
-                R.drawable.sosseguei,
-                R.raw.sosseguei,
+                R.drawable.louca_de_saudade,
+                R.raw.anjos_cantam,
                 9.5,
                 getString(R.string.Jorge),
                 2015,
@@ -186,7 +185,7 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_sertanejo_4)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 10,
                 getString(R.string.nome_musica_sertanejo_5),
                 "Sertanejo",
@@ -203,12 +202,12 @@ public class ListMusic extends Fragment {
 
 // ==================== SABRINA CARPENTER - POP ====================
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 11,
                 getString(R.string.nome_musica_pop_1),
                 "Pop",
-                R.drawable.espresso,
-                R.raw.espresso,
+                R.drawable.house_tour,
+                R.raw.expresso,
                 10.0,
                 getString(R.string.Sabrina),
                 2024,
@@ -217,12 +216,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_pop_1)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 12,
                 getString(R.string.nome_musica_pop_2),
                 "Pop",
-                R.drawable.please_please_please,
-                R.raw.please_please_please,
+                R.drawable.boy_with_luv,
+                R.raw.please,
                 9.5,
                 getString(R.string.Sabrina),
                 2024,
@@ -231,11 +230,11 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_pop_2)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 13,
                 getString(R.string.nome_musica_pop_3),
                 "Pop",
-                R.drawable.feather,
+                R.drawable.house_tour,
                 R.raw.feather,
                 9.5,
                 getString(R.string.Sabrina),
@@ -245,11 +244,11 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_pop_3)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 14,
                 getString(R.string.nome_musica_pop_4),
                 "Pop",
-                R.drawable.nonsense,
+                R.drawable.house_tour,
                 R.raw.nonsense,
                 9.0,
                 getString(R.string.Sabrina),
@@ -259,7 +258,7 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_pop_4)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 15,
                 getString(R.string.nome_musica_pop_5),
                 "Pop",
@@ -276,7 +275,7 @@ public class ListMusic extends Fragment {
 
 // ==================== GOSPEL ====================
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 16,
                 getString(R.string.nome_musica_gospel_1),
                 "Gospel",
@@ -290,12 +289,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_1)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 17,
                 getString(R.string.nome_musica_gospel_2),
                 "Gospel",
-                R.drawable.aquieta_minha_alma,
-                R.raw.aquieta_minha_alma,
+                R.drawable.filho_da_fe,
+                R.raw.lugar_secreto,
                 9.5,
                 getString(R.string.Samuel),
                 2015,
@@ -304,12 +303,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_2)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 18,
                 getString(R.string.nome_musica_gospel_3),
                 "Gospel",
-                R.drawable.todavia_me_alegrarei,
-                R.raw.todavia_me_alegrarei,
+                R.drawable.filho_da_fe,
+                R.raw.ousado_amor,
                 9.5,
                 getString(R.string.Samuel),
                 2020,
@@ -318,12 +317,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_3)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 19,
                 getString(R.string.nome_musica_gospel_4),
                 "Gospel",
-                R.drawable.lugar_secreto,
-                R.raw.lugar_secreto,
+                R.drawable.filho_da_fe,
+                R.raw.raridade,
                 10.0,
                 getString(R.string.Samuel),
                 2018,
@@ -332,12 +331,12 @@ public class ListMusic extends Fragment {
                 getString(R.string.avaliacao_gospel_4)
         ));
 
-        listaMusicas.add(new ItemModel(
+        todasAsMusicas.add(new ItemModel(
                 20,
                 getString(R.string.nome_musica_gospel_5),
                 "Gospel",
-                R.drawable.ousado_amor,
-                R.raw.ousado_amor,
+                R.drawable.filho_da_fe,
+                R.raw.faz_chover,
                 9.5,
                 getString(R.string.Samuel),
                 2018,
@@ -347,12 +346,12 @@ public class ListMusic extends Fragment {
         ));
 
         // Lista que será exibida
-        listaMusicas = new ArrayList<>(todasAsMusicas);
+        todasAsMusicas = new ArrayList<>(todasAsMusicas);
 
         // Criando o Adapter
         adapter = new ItemAdapter(
                 requireContext(),
-                listaMusicas
+                todasAsMusicas
         );
 
         // Ligando Adapter ao ListView
