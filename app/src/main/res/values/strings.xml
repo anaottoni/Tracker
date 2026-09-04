@@ -85,6 +85,36 @@
     <string name="avaliador_kpop_5">Ana Beatriz</string>
     <string name="avaliacao_kpop_5">Melhor do Ano</string>
 
+    <!-- Música 6 -->
+    <string name="nome_musica_kpop_6">Dynamite</string>
+    <string name="album_kpop_6">BE</string>
+    <string name="avaliador_kpop_6">Ana Beatriz</string>
+    <string name="avaliacao_kpop_6">Contagiante e cheia de energia</string>
+
+    <!-- Música 7 -->
+    <string name="nome_musica_kpop_7">Butter</string>
+    <string name="album_kpop_7">Butter</string>
+    <string name="avaliador_kpop_7">Lucas Silva</string>
+    <string name="avaliacao_kpop_7">Sucesso absoluto nas pistas</string>
+
+    <!-- Música 8 -->
+    <string name="nome_musica_kpop_8">Fake Love</string>
+    <string name="album_kpop_8">Love Yourself: Tear</string>
+    <string name="avaliador_kpop_8">Mariana Costa</string>
+    <string name="avaliacao_kpop_8">Obra-prima do grupo</string>
+
+    <!-- Música 9 -->
+    <string name="nome_musica_kpop_9">MIC Drop</string>
+    <string name="album_kpop_9">Love Yourself: Her</string>
+    <string name="avaliador_kpop_9">Pedro Henrique</string>
+    <string name="avaliacao_kpop_9">Batida marcante e poderosa</string>
+
+    <!-- Música 10 -->
+    <string name="nome_musica_kpop_10">Blood Sweat</string>
+    <string name="album_kpop_10">Wings</string>
+    <string name="avaliador_kpop_10">Camila Rocha</string>
+    <string name="avaliacao_kpop_10">Conceito e vocais incríveis</string>
+
 
     <!-- ====================================================== -->
     <!-- ================= JORGE E MATEUS ===================== -->
@@ -121,6 +151,36 @@
     <string name="album_sertanejo_5">Como. Sempre Feito. Nunca.</string>
     <string name="avaliador_sertanejo_5">Ana Clara</string>
     <string name="avaliacao_sertanejo_5">Sofrendo muito com essa</string>
+
+    <!-- Música 6 -->
+    <string name="nome_musica_sertanejo_6">Pode Chorar</string>
+    <string name="album_sertanejo_6">Ao Vivo em Goiânia</string>
+    <string name="avaliador_sertanejo_6">João Pedro</string>
+    <string name="avaliacao_sertanejo_6">Um clássico marcante</string>
+
+    <!-- Música 7 -->
+    <string name="nome_musica_sertanejo_7">Amo Noite e Dia</string>
+    <string name="album_sertanejo_7">Aí Já Era</string>
+    <string name="avaliador_sertanejo_7">Fernanda Lima</string>
+    <string name="avaliacao_sertanejo_7">Anima qualquer ambiente</string>
+
+    <!-- Música 8 -->
+    <string name="nome_musica_sertanejo_8">Sosseguei</string>
+    <string name="album_sertanejo_8">Como Sempre Feito Nunca</string>
+    <string name="avaliador_sertanejo_8">Gabriel Alves</string>
+    <string name="avaliacao_sertanejo_8">Hino das festas sertanejas</string>
+
+    <!-- Música 9 -->
+    <string name="nome_musica_sertanejo_9">Propaganda</string>
+    <string name="album_sertanejo_9">Terra Sem CEP</string>
+    <string name="avaliador_sertanejo_9">Beatriz Souza</string>
+    <string name="avaliacao_sertanejo_9">Letra chiclete e cativante</string>
+
+    <!-- Música 10 -->
+    <string name="nome_musica_sertanejo_10">Tijolão</string>
+    <string name="album_sertanejo_10">Ao Vivo em Brasília</string>
+    <string name="avaliador_sertanejo_10">Rodrigo Melo</string>
+    <string name="avaliacao_sertanejo_10">Muito boa para cantar junto</string>
 
 
     <!-- ====================================================== -->
@@ -159,6 +219,36 @@
     <string name="avaliador_pop_5">Sofia</string>
     <string name="avaliacao_pop_5">Amei esse hit</string>
 
+    <!-- Música 6 -->
+    <string name="nome_musica_pop_6">Taste</string>
+    <string name="album_pop_6">Short n\' Sweet</string>
+    <string name="avaliador_pop_6">Juliana Paes</string>
+    <string name="avaliacao_pop_6">Ritmo moderno e viciante</string>
+
+    <!-- Música 7 -->
+    <string name="nome_musica_pop_7">Skin</string>
+    <string name="album_pop_7">Skin</string>
+    <string name="avaliador_pop_7">Felipe Neto</string>
+    <string name="avaliacao_pop_7">Composição bem pessoal</string>
+
+    <!-- Música 8 -->
+    <string name="nome_musica_pop_8">Thumbs</string>
+    <string name="album_pop_8">Evolution</string>
+    <string name="avaliador_pop_8">Carla Dias</string>
+    <string name="avaliacao_pop_8">Excelente linha de baixo</string>
+
+    <!-- Música 9 -->
+    <string name="nome_musica_pop_9">Skinny Dipping</string>
+    <string name="album_pop_9">Emails I Can\'t Send</string>
+    <string name="avaliador_pop_9">Rafael Torres</string>
+    <string name="avaliacao_pop_9">Melodia leve e narrativa incrível</string>
+
+    <!-- Música 10 -->
+    <string name="nome_musica_pop_10">Fast Times</string>
+    <string name="album_pop_10">Emails I Can\'t Send</string>
+    <string name="avaliador_pop_10">Vanessa Martins</string>
+    <string name="avaliacao_pop_10">Arranjos refinados</string>
+
 
     <!-- ====================================================== -->
     <!-- ======================= GOSPEL ======================= -->
@@ -195,6 +285,36 @@
     <string name="album_gospel_5">Ousado Amor</string>
     <string name="avaliador_gospel_5">Maria Eduarda</string>
     <string name="avaliacao_gospel_5">Uma música emocionante sobre o amor de Deus.</string>
+
+    <!-- Música 6 -->
+    <string name="nome_musica_gospel_6">Todavia Me Alegrarei</string>
+    <string name="album_gospel_6">Todavia Me Alegrarei</string>
+    <string name="avaliador_gospel_6">Marcos Vinicius</string>
+    <string name="avaliacao_gospel_6">Letra inspiradora de fé</string>
+
+    <!-- Música 7 -->
+    <string name="nome_musica_gospel_7">Vitória no Deserto</string>
+    <string name="album_gospel_7">Deus da Força</string>
+    <string name="avaliador_gospel_7">Patrícia Santos</string>
+    <string name="avaliacao_gospel_7">Edificante e cheia de força</string>
+
+    <!-- Música 8 -->
+    <string name="nome_musica_gospel_8">Porque Ele Vive</string>
+    <string name="album_gospel_8">Harpa Cristã</string>
+    <string name="avaliador_gospel_8">Daniel Oliveira</string>
+    <string name="avaliacao_gospel_8">Um clássico inesquecível</string>
+
+    <!-- Música 9 -->
+    <string name="nome_musica_gospel_9">Nossa Canção</string>
+    <string name="album_gospel_9">Nossa Canção</string>
+    <string name="avaliador_gospel_9">Aline Barros</string>
+    <string name="avaliacao_gospel_9">Lindo momento de adoração</string>
+
+    <!-- Música 10 -->
+    <string name="nome_musica_gospel_10">A Ele a Glória</string>
+    <string name="album_gospel_10">Ao Vivo na Igreja</string>
+    <string name="avaliador_gospel_10">Thiago Cardoso</string>
+    <string name="avaliacao_gospel_10">Arrangement emocionante e profundo</string>
 
 
     <!-- ====================================================== -->
